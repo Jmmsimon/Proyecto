@@ -37,7 +37,9 @@ export class TodoCardComponent implements OnInit, OnDestroy {
 
   deleteTask(task: Task) {
     if(confirm('seguro de eliminar este dato?')){
+      // esta linea identifica al index a partir de la condicion, retorna el índice
       const index = this.tasks.findIndex( task_ => task.title == task_.title )
+      //esta funcion borra un elemento del array a partir de un índice y la cantidad de elementos a borrar
       this.tasks.splice( index, 1)
     };
   }
